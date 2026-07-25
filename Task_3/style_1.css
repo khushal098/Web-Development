@@ -1,0 +1,60 @@
+* {
+    background-color: #ff7e55; 
+}
+
+
+body {
+    border: 8px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+.Head {
+    color: blue;
+}
+
+#Bglime {
+    background-color: #00ff66; 
+    color: darkblue;
+}
+
+#A {
+    color: red;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+}
+
+#para {
+    color: green;
+}
+
+P {
+    color: white;
+}
+
+P span {
+    color: black;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+}
+
+ul li:nth-child(1) a {
+    background-color: yellow;
+    color: green;
+}
+
+ul li:nth-child(2) a {
+    background-color: blue;
+    color: red;
+}
+
+
+ol li:nth-child(2) {
+    color: blue;
+}
+
+ol li:nth-child(3) {
+    color: red;
+}
