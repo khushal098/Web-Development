@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    margin: 10vh 25vw;
+}
+button{
+     background: linear-gradient(to right, #4facfe, #00f2fe);
+     color: whitesmoke;
+     font-size: 18px;
+     padding: 12px 15px;
+     border: none;
+     border-radius: 6px;
+     cursor: pointer;
+     /* margin-top: 20px; */
+     width: 100%
+}
+img{
+    width: 100%;
+}
