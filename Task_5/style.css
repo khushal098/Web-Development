@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    border: 1px black solid;
+    margin: 5px;
+}
+
+nav{
+    padding: 20px 5vw;
+}
+
+.logo{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.menu{
+    display: inline-block;
+    list-style: none;
+    margin-left: 18vw;
+    vertical-align: middle;
+}
+
+.menu li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.username{
+    margin-left: 18vw;
+    padding: 8px 16px;
+    background-color: lightblue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.left{
+    display: inline-block;
+    width: 45%;
+   
+}
+.right{
+    display: inline-block;
+    width: 54%;
+    padding-left: 50;
+}
+img{
+    padding-left: 265px;
+}
+
+span{
+        color: rgb(30, 167, 49);
+
+    }
+h3{
+    color: rgb(42, 192, 242);
+    font-size: 32px;
+}
+p{
+    color: rgb(42, 213, 182);
+}
+h3,p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+button{
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: linear-gradient(to right, #007bff, #00c6ff);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
