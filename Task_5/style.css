@@ -1,87 +1,126 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
-body{
-    border: 1px black solid;
+
+body {
+    border: 1px solid black;
     margin: 5px;
+    min-height: 100vh;
 }
 
-nav{
-    padding: 20px 5vw;
+ /* NAVBAR  */
+
+nav {
+    height: 80px;
+    padding: 20px 6vw;
+    white-space: nowrap;
 }
 
-.logo{
+.logo {
     display: inline-block;
     vertical-align: middle;
+    font-size: 28px;
+    font-weight: bold;
+    width: 28%;
 }
 
-.menu{
+.menu {
     display: inline-block;
+     vertical-align: middle;
     list-style: none;
-    margin-left: 18vw;
-    vertical-align: middle;
+      width: 42%;
+     text-align: center;
 }
 
-.menu li{
+.menu li {
     display: inline-block;
-    margin-right: 20px;
+    margin: 0 12px;
 }
 
-.menu li a{
+.menu li a {
     text-decoration: none;
-    color: black;
+    color: #555;
     font-size: 16px;
 }
 
-.username{
-    margin-left: 18vw;
-    padding: 8px 16px;
-    background-color: lightblue;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.left{
+.username {
     display: inline-block;
-    width: 45%;
-   
+    vertical-align: middle;
+    padding: 10px 20px;
+      background-color: #e8f7ff;
+      color: #0099ee;
+      border: none;
+      border-radius: 12px;
+      font-size: 14px;
 }
-.right{
+
+/* hero */
+
+.hero {
+    height: calc(100vh - 80px);
+    font-size: 0;
+}
+
+/* LEFT SIDE */
+
+.left {
     display: inline-block;
-    width: 54%;
-    padding-left: 50;
-}
-img{
-    padding-left: 265px;
-}
-
-span{
-        color: rgb(30, 167, 49);
-
-    }
-h3{
-    color: rgb(42, 192, 242);
-    font-size: 32px;
-}
-p{
-    color: rgb(42, 213, 182);
-}
-h3,p{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    vertical-align: middle;
+    width: 52%;
+      padding-left: 13%;
+      padding-top: 8vh;
+        font-size: 16px;
 }
 
-button{
-    margin-top: 20px;
-    padding: 12px 24px;
-    background: linear-gradient(to right, #007bff, #00c6ff);
+h3 {
+    color: #4d5d6b;
+    font-size: 48px;
+    line-height: 1.4;
+    font-family: Arial, sans-serif;
+}
+
+h3 span {
+    color: #119fe9;
+    display: block;
+}
+
+p {
+    color: #9aa7b2;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-top: 10px;
+    max-width: 600px;
+    font-family: Arial, sans-serif;
+}
+
+/* BUTTON */
+
+.left button {
+    margin-top: 35px;
+    padding: 18px 55px;
+    background: linear-gradient(to right, #009cff, #29b5ef);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 18px;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
 }
 
+/* RIGHT SIDE */
+
+.right {
+    display: inline-block;
+    vertical-align: middle;
+    width: 47%;
+    text-align: center;
+    font-size: 16px;
+}
+
+.right img {
+    width: 40%;
+     max-width: 450px;
+    height: auto;
+}
