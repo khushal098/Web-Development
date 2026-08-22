@@ -1,0 +1,163 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Poppins', sans-serif; /* Applied standard font globally */
+}
+
+/* Main Container Layout */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Left Panel Styling */
+.left-panel {
+    background-color: #0099ff; /* Updated to match theme blue */
+    flex: 1; /* Takes equal half */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#logo {
+    max-width: 70%;
+    height: auto;
+    object-fit: contain; /* Keeps image sharp without distortion */
+}
+
+/* Right Panel Layout */
+.right-panel {
+    flex: 1; /* Takes equal half */
+    background-color: #f7faff;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+    padding: 20px;
+}
+
+/* Card Content Box */
+.login-card {
+    width: 100%;
+    max-width: 380px; /* Gives form a proper width */
+    text-align: center;
+}
+
+.heading h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 6px;
+}
+
+.heading p {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 32px;
+}
+
+/* Form Elements */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px; /* Smooth spacing between input groups */
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 13px;
+    color: #6c757d;
+    margin-bottom: 6px; /* Spacing below label */
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 18px; 
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    outline: none;
+    font-size: 14px;
+    background-color: #ffffff;
+    transition: border-color 0.2s ease;
+}
+
+.input-group input::placeholder {
+    color: #cbd5e1;
+}
+
+.input-group input:focus {
+    border-color: #0099ff; /* Highlights field on click */
+}
+
+/* Forgot Password */
+.forgot-password {
+    text-align: right; /* Clean alignment to the right side */
+}
+
+.forgot-password a {
+    font-size: 12px;
+    color: #6c757d;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #0099ff;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+}
+
+/* Fixed space in selector */
+button:hover {
+    background-color: #0080ff;
+}
+
+/* Footer Section */
+.register {
+    margin-top: 24px;
+    font-size: 13px;
+    color: #4a5568;
+}
+
+/* Fixed nested selector */
+.signup {
+    color: #0099ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signup:hover {
+    text-decoration: underline;
+}
