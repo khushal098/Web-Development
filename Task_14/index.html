@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let number = 153;
+
+        // ----- Sum of first n numbers -----
+        let n = 10;
+        let sumOfN = 0;
+        for (let i = 1; i <= n; i++) {
+            sumOfN += i;
+        }
+
+        // ----- Table of n -----
+        let tableOf = 5;
+        let table = "";
+        for (let i = 1; i <= 10; i++) {
+            table += tableOf + " x " + i + " = " + (tableOf * i) + "\n";
+        }
+
+        // ----- Check if number is prime -----
+        let isPrime = true;
+        if (number < 2) {
+            isPrime = false;
+        } else {
+            for (let i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i === 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+        }
+
+        // ----- Factors of number -----
+        let factors = [];
+        for (let i = 1; i <= number; i++) {
+            if (number % i === 0) {
+                factors.push(i);
+            }
+        }
+
+        // ----- Sum of digits -----
+        let temp = number;
+        let digitSum = 0;
+        while (temp > 0) {
+            let digit = temp % 10;
+            digitSum += digit;
+            temp = Math.floor(temp / 10);
+        }
+
+        // ----- Check Armstrong number -----
+        let armstrongCheck = number;
+        let armstrongSum = 0;
+        while (armstrongCheck > 0) {
+            let digit = armstrongCheck % 10;
+            armstrongSum += Math.pow(digit, 3);
+            armstrongCheck = Math.floor(armstrongCheck / 10);
+        }
+        let isArmstrong = (armstrongSum === number);
+
+        // ----- Display results -----
+        console.log("Number: " + number);
+        console.log("Sum of first " + n + " numbers: " + sumOfN);
+        console.log("Table of " + tableOf + ":");
+        console.log(table);
+        console.log("Sum of its digits: " + digitSum);
+        console.log("Is it an Armstrong number? " + (isArmstrong ? "Yes" : "No"));
+        console.log("Is it a prime number? " + (isPrime ? "Yes" : "No"));
+        console.log("Factors: " + factors.join(", "));
+    </script>
+</body>
+
+</html>
