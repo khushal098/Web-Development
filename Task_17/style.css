@@ -1,0 +1,85 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #2d3748;
+  padding: 32px 16px;
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 26px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 14px;
+}
+
+.panel {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+input {
+  flex: 1;
+  min-width: 140px;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+button {
+  padding: 10px 22px;
+  background: #6d28d9;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover { background: #5b21b6; }
+
+.user-result {
+  margin-top: 14px;
+  font-weight: bold;
+}
+
+.example {
+  border-left: 4px solid #cbd5e0;
+  background: #f8fafc;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  border-radius: 4px;
+}
+
+.example h3 {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.example p { font-size: 14px; margin-bottom: 4px; }
+
+.example.success { border-left-color: #38a169; }
+.example.failure { border-left-color: #e53e3e; }
+
+.success-text { color: #2f855a; font-weight: bold; }
+.error-text   { color: #c53030; font-weight: bold; }
