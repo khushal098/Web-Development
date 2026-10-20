@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Laundry Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-inner">
+      <div class="logo">Logo</div>
+
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+
+      <div class="user-box">
+        <span class="username">Username</span>
+        <button class="logout-btn" id="logoutBtn" title="Log out" aria-label="Log out">&#x2192;</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <section class="left">
+
+      <div class="card cart-card">
+        <h2 class="card-title">Added Items</h2>
+
+        <div class="cart-table">
+          <div class="cart-head">
+            <span>S.No</span>
+            <span>Service Name</span>
+            <span>Price</span>
+          </div>
+
+          <div class="cart-body" id="cartBody">
+            <div class="empty-cart" id="emptyCart">
+              <div class="info-icon">i</div>
+              <p class="empty-title">No Items Added</p>
+              <p class="empty-sub">Add items to the cart from the services bar</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="total-row">
+          <span>Total Amount</span>
+          <span id="totalAmount">&#8377; 0</span>
+        </div>
+      </div>
+
+      <div class="card booking-card">
+        <h3 class="booking-title">Book Now</h3>
+
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" placeholder="John Doe">
+
+        <div class="row">
+          <div>
+            <label for="email">Email ID</label>
+            <input type="email" id="email" placeholder="mailid@gmail.com">
+          </div>
+          <div>
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="0000000000" maxlength="10">
+          </div>
+        </div>
+
+        <button class="book-btn" id="bookBtn" disabled>Book now</button>
+        <p class="message" id="message"></p>
+      </div>
+
+    </section>
+
+    <!-- Right section -->
+    <section class="right card">
+      <h2 class="browse-title">Browse Our Services</h2>
+      <p class="browse-sub">Click on the add to cart button to add the services to your cart or press skip</p>
+
+      <hr>
+
+      <div class="service" id="service">
+        <div class="service-img" id="serviceImg"></div>
+        <div class="service-info">
+          <h3 id="serviceName"></h3>
+          <span class="service-price" id="servicePrice"></span>
+        </div>
+
+        <div class="service-btns">
+          <button class="skip-btn" id="skipBtn">Skip Item &#8855;</button>
+          <button class="add-btn" id="addBtn">Add Item &#8853;</button>
+        </div>
+      </div>
+
+      <div class="done-box" id="doneBox" hidden>
+        <p class="done-title">You have seen all our services</p>
+        <p class="done-sub">Fill in your details and press Book now.</p>
+      </div>
+
+      <hr>
+
+      <p class="hint" id="hint">&#9432; Add the items to the cart and book now</p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
