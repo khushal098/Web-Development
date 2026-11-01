@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="output.css">
+<title>Greenwood Public Library</title>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        keyframes: {
+          fadeUp: { '0%': { opacity: '0', transform: 'translateY(24px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+          fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } }
+        },
+        animation: {
+          'fade-up': 'fadeUp .8s ease-out both',
+          'fade-in': 'fadeIn 1s ease-out both'
+        }
+      }
+    }
+  }
+</script>
+<style>
+  .antialiased { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .animate-fade-up, .animate-fade-in { animation: none !important; }
+    * { transition-duration: .01ms !important; }
+  }
+</style>
+</head>
+<body class="bg-white text-zinc-900 antialiased overflow-x-hidden font-sans">
+
+
+
+
+  <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-zinc-100">
+  <div class="max-w-7xl mx-auto px-5 h-16 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3">
+      <span class="text-lg font-semibold tracking-tight">Greenwood</span>
+      <span class="text-[11px] px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 font-medium">Open Sat</span>
+    </a>
+    <div class="hidden md:flex items-center gap-10 text-sm text-zinc-500">
+      <a href="#sections" class="relative hover:text-zinc-900 transition-colors after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-zinc-900 after:transition-all after:duration-300 hover:after:w-full">Sections</a>
+      <a href="#gallery" class="relative hover:text-zinc-900 transition-colors after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-zinc-900 after:transition-all after:duration-300 hover:after:w-full">Gallery</a>
+      <a href="#membership" class="relative hover:text-zinc-900 transition-colors after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-zinc-900 after:transition-all after:duration-300 hover:after:w-full">Membership</a>
+      <a href="#events" class="relative hover:text-zinc-900 transition-colors after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-zinc-900 after:transition-all after:duration-300 hover:after:w-full">Events</a>
+    </div>
+    <a href="#contact" class="text-sm px-5 py-2 rounded-full border border-zinc-200 bg-white text-zinc-900 hover:bg-zinc-900 hover:text-white hover:border-zinc-900 transition-all duration-300">Visit Us</a>
+  </div>
+</nav>
+
+<main class="max-w-7xl mx-auto px-5 overflow-hidden" id="top">
+
+
+
+
+  <section class="grid md:grid-cols-2 gap-12 items-center py-16 md:py-28">
+    <div>
+      <h1 class="text-5xl md:text-7xl font-light tracking-tight leading-[1.05] animate-fade-up">Your Neighbourhood Library.</h1>
+      <p class="mt-6 max-w-md text-zinc-500 leading-relaxed animate-fade-up" style="animation-delay:.15s">Thousands of books, quiet reading rooms, community events, and free Wi-Fi — serving Greenwood since 1983.</p>
+      <div class="mt-8 flex flex-wrap gap-3 animate-fade-up" style="animation-delay:.3s">
+        <a href="#gallery" class="px-6 py-3 rounded-full bg-zinc-900 text-white text-sm hover:bg-zinc-700 transition-colors">Explore Collection</a>
+        <a href="#membership" class="px-6 py-3 rounded-full border border-zinc-200 text-sm hover:border-zinc-900 transition-colors">Join Free</a>
+      </div>
+    </div>
+    <div class="overflow-hidden rounded-3xl bg-zinc-100 animate-fade-in" style="animation-delay:.4s">
+      <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1200&q=80" alt="Shelves of old books" class="w-full aspect-[4/3] object-cover hover:scale-105 transition-transform duration-700">
+    </div>
+  </section>
+
+
+
+
+  <section class="reveal grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-zinc-100 py-10">
+    <div><p class="text-3xl font-light">12,000+</p><p class="text-xs text-zinc-400 mt-1">Books &amp; journals</p></div>
+    <div><p class="text-3xl font-light">40+</p><p class="text-xs text-zinc-400 mt-1">Years of service</p></div>
+    <div><p class="text-3xl font-light text-emerald-600">Free</p><p class="text-xs text-zinc-400 mt-1">Wi-Fi &amp; basic access</p></div>
+    <div><p class="text-3xl font-light">6</p><p class="text-xs text-zinc-400 mt-1">Dedicated sections</p></div>
+  </section>
+
+
+
+
+
+  <section id="sections" class="reveal py-20 scroll-mt-16">
+    <p class="text-xs tracking-widest text-zinc-400 uppercase border-b border-zinc-100 pb-4 mb-10">Our Sections</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <a href="#" class="group p-10 rounded-xl bg-zinc-50 hover:bg-emerald-50 transition-colors duration-300">
+        <h3 class="text-xl font-light group-hover:text-emerald-800 transition-colors">Fiction &amp; Literature</h3>
+        <p class="mt-3 text-sm text-zinc-500 group-hover:text-emerald-700 transition-colors">Novels, short stories, and poetry — from timeless classics to new voices.</p>
+        <span class="inline-block mt-6 text-xs underline underline-offset-4 text-zinc-400 group-hover:text-emerald-800 transition-colors">Browse Fiction</span>
+      </a>
+      <a href="#" class="group p-10 rounded-xl bg-zinc-50 hover:bg-amber-50 transition-colors duration-300">
+        <h3 class="text-xl font-light group-hover:text-amber-800 transition-colors">Children's Corner</h3>
+        <p class="mt-3 text-sm text-zinc-500 group-hover:text-amber-700 transition-colors">Picture books, early readers, and a cozy space for young learners.</p>
+        <span class="inline-block mt-6 text-xs underline underline-offset-4 text-zinc-400 group-hover:text-amber-800 transition-colors">Browse Children's</span>
+      </a>
+      <a href="#" class="group p-10 rounded-xl bg-zinc-50 hover:bg-blue-50 transition-colors duration-300">
+        <h3 class="text-xl font-light group-hover:text-blue-800 transition-colors">Science &amp; Technology</h3>
+        <p class="mt-3 text-sm text-zinc-500 group-hover:text-blue-700 transition-colors">Research journals, textbooks, and STEM reference materials.</p>
+        <span class="inline-block mt-6 text-xs underline underline-offset-4 text-zinc-400 group-hover:text-blue-800 transition-colors">Browse Science</span>
+      </a>
+      <a href="#" class="group p-10 rounded-xl bg-zinc-50 hover:bg-rose-50 transition-colors duration-300">
+        <h3 class="text-xl font-light group-hover:text-rose-800 transition-colors">History &amp; Culture</h3>
+        <p class="mt-3 text-sm text-zinc-500 group-hover:text-rose-700 transition-colors">Local archives, world civilisations, art history, and cultural studies.</p>
+        <span class="inline-block mt-6 text-xs underline underline-offset-4 text-zinc-400 group-hover:text-rose-800 transition-colors">Browse History</span>
+      </a>
+      <a href="#" class="group p-10 rounded-xl bg-zinc-50 hover:bg-violet-50 transition-colors duration-300">
+        <h3 class="text-xl font-light group-hover:text-violet-800 transition-colors">Periodicals &amp; Newspapers</h3>
+        <p class="mt-3 text-sm text-zinc-500 group-hover:text-violet-700 transition-colors">Daily papers, weekly magazines, and curated journal subscriptions.</p>
+        <span class="inline-block mt-6 text-xs underline underline-offset-4 text-zinc-400 group-hover:text-violet-800 transition-colors">Browse Periodicals</span>
+      </a>
+      <a href="#" class="group p-10 rounded-xl bg-zinc-50 hover:bg-slate-100 transition-colors duration-300">
+        <h3 class="text-xl font-light group-hover:text-slate-800 transition-colors">Digital Media Lab</h3>
+        <p class="mt-3 text-sm text-zinc-500 group-hover:text-slate-700 transition-colors">Public computers, e-book access, and digital literacy resources.</p>
+        <span class="inline-block mt-6 text-xs underline underline-offset-4 text-zinc-400 group-hover:text-slate-800 transition-colors">Browse Digital</span>
+      </a>
+    </div>
+  </section>
+
+
+
+
+  <section id="gallery" class="reveal pb-20 scroll-mt-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <figure class="group">
+        <div class="overflow-hidden rounded-lg bg-zinc-100"><img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=1000&q=80" alt="Reading Hall" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-700"></div>
+        <figcaption class="flex justify-between items-center mt-3 text-sm"><span>Reading Hall</span><span class="text-xs px-3 py-1 rounded-full border border-zinc-200 text-zinc-400">Main Floor</span></figcaption>
+      </figure>
+      <figure class="group">
+        <div class="overflow-hidden rounded-lg bg-zinc-100"><img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1000&q=80" alt="Fiction Collection" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-700"></div>
+        <figcaption class="flex justify-between items-center mt-3 text-sm"><span>Fiction Collection</span><span class="text-xs px-3 py-1 rounded-full border border-zinc-200 text-zinc-400">2nd Floor</span></figcaption>
+      </figure>
+      <figure class="group">
+        <div class="overflow-hidden rounded-lg bg-zinc-100"><img src="https://images.unsplash.com/photo-1568667256549-094345857637?auto=format&fit=crop&w=1000&q=80" alt="Archive Wing" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-700"></div>
+        <figcaption class="flex justify-between items-center mt-3 text-sm"><span>Archive Wing</span><span class="text-xs px-3 py-1 rounded-full border border-zinc-200 text-zinc-400">Basement</span></figcaption>
+      </figure>
+      <figure class="group">
+        <div class="overflow-hidden rounded-lg bg-zinc-100"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80" alt="Digital Media Lab" class="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-700"></div>
+        <figcaption class="flex justify-between items-center mt-3 text-sm"><span>Digital Media Lab</span><span class="text-xs px-3 py-1 rounded-full border border-zinc-200 text-zinc-400">Ground Floor</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+
+
+
+
+  <section class="reveal pb-20">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[220px]">
+      <div class="md:col-span-2 md:row-span-1 p-8 rounded-2xl bg-slate-50 hover:bg-slate-100 transition-colors duration-300 flex flex-col justify-between">
+        <span class="text-xs tracking-widest text-zinc-400 uppercase">About</span>
+        <p class="text-3xl md:text-4xl font-light uppercase leading-tight">A place for<br>everyone.</p>
+      </div>
+      <div class="p-8 rounded-2xl bg-emerald-50 hover:bg-emerald-100 transition-colors duration-300 flex flex-col justify-between">
+        <span class="text-xs tracking-widest text-zinc-400 uppercase">Community</span>
+        <p class="text-2xl font-light uppercase leading-tight">Open doors,<br>open minds.</p>
+      </div>
+      <div class="p-8 rounded-2xl bg-amber-50 hover:bg-amber-100 transition-colors duration-300 flex flex-col justify-between">
+        <span class="text-xs tracking-widest text-zinc-400 uppercase">40+ Years</span>
+        <p class="text-2xl font-light uppercase leading-tight">Trusted by<br>generations.</p>
+      </div>
+      <div class="p-8 rounded-2xl bg-rose-50 hover:bg-rose-100 transition-colors duration-300 flex flex-col justify-between">
+        <span class="text-xs tracking-widest text-zinc-400 uppercase">Events</span>
+        <p class="text-2xl font-light uppercase leading-tight">Learn beyond<br>books.</p>
+      </div>
+      <div class="p-8 rounded-2xl bg-violet-50 hover:bg-violet-100 transition-colors duration-300 flex flex-col justify-between">
+        <span class="text-xs tracking-widest text-zinc-400 uppercase">Digital</span>
+        <p class="text-2xl font-light uppercase leading-tight">E-books, Wi-Fi,<br>&amp; computers.</p>
+      </div>
+      <div class="p-8 rounded-2xl bg-zinc-50 hover:bg-zinc-100 transition-colors duration-300 flex flex-col justify-between">
+        <span class="text-xs tracking-widest text-zinc-400 uppercase">Access</span>
+        <p class="text-2xl font-light uppercase leading-tight">No barriers<br>to knowledge.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <section class="reveal pb-24 max-w-4xl mx-auto">
+    <h2 class="text-4xl md:text-5xl font-light tracking-tight leading-tight">More than a building full of books — a home for curious minds.</h2>
+    <div class="mt-10 columns-1 sm:columns-2 gap-10 text-sm text-zinc-500 leading-relaxed">
+      <p class="mb-4">Greenwood Public Library has been at the heart of this community since 1983. We believe everyone deserves free access to knowledge, regardless of age, income, or background. Our six sections cover everything from fiction to digital media.</p>
+      <p>Beyond books, we host weekly events — reading challenges for children, book clubs, digital literacy workshops, and author meets. Our study rooms, free Wi-Fi, and welcoming staff make Greenwood a place people come back to, year after year.</p>
+    </div>
+  </section>
+
+
+
+
+
+  <section id="membership" class="reveal pb-24 scroll-mt-16">
+    <p class="text-xs tracking-widest text-zinc-400 uppercase border-b border-zinc-100 pb-4 mb-8">Membership</p>
+    <div class="flex items-center justify-between mb-8">
+      <h2 class="text-3xl md:text-4xl font-light">Join the Library</h2>
+      <a href="#" class="text-sm px-5 py-2 rounded-full border border-zinc-200 hover:bg-zinc-900 hover:text-white transition-colors">Sign Up</a>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="p-8 rounded-lg bg-emerald-50 flex flex-col justify-between min-h-[320px]">
+        <div>
+          <p class="text-xs tracking-widest text-zinc-400 uppercase">Choose a plan</p>
+          <h3 class="mt-6 text-2xl font-light leading-snug">Everyone is welcome here.</h3>
+          <p class="mt-4 text-sm text-zinc-500">Membership unlocks borrowing, study rooms, and priority events.</p>
+        </div>
+        <a href="#" class="self-start mt-8 text-sm px-5 py-2.5 rounded-full bg-zinc-900 text-white hover:bg-zinc-700 transition-colors">Learn More</a>
+      </div>
+
+      <div class="group border border-zinc-100 rounded-lg overflow-hidden flex flex-col">
+        <div class="overflow-hidden bg-zinc-100"><img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=700&q=80" alt="" class="w-full h-48 object-cover brightness-95 group-hover:scale-105 transition-transform duration-700"></div>
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="font-medium">Basic</h3><p class="text-xl font-light text-zinc-500">Free</p>
+          <p class="mt-3 text-xs text-zinc-400">3 books · Reading rooms · Wi-Fi</p>
+          <a href="#" class="mt-auto pt-6"><span class="block text-center text-sm py-2.5 rounded-full border border-zinc-200 hover:bg-zinc-900 hover:text-white transition-colors">Join Free</span></a>
+        </div>
+      </div>
+
+      <div class="group relative border border-zinc-100 rounded-lg overflow-hidden flex flex-col">
+        <span class="absolute top-3 right-3 z-10 text-[11px] px-3 py-1 rounded-full bg-zinc-900 text-white">Popular</span>
+        <div class="overflow-hidden bg-zinc-100"><img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=700&q=80" alt="" class="w-full h-48 object-cover brightness-95 group-hover:scale-105 transition-transform duration-700"></div>
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="font-medium">Student</h3><p class="text-xl font-light">₹200<span class="text-xs text-zinc-400">/yr</span></p>
+          <p class="mt-3 text-xs text-zinc-400">8 books · Digital catalogue · Study rooms</p>
+          <a href="#" class="mt-auto pt-6"><span class="block text-center text-sm py-2.5 rounded-full bg-zinc-900 text-white hover:bg-zinc-700 transition-colors">Join Now</span></a>
+        </div>
+      </div>
+
+      <div class="group border border-zinc-100 rounded-lg overflow-hidden flex flex-col">
+        <div class="overflow-hidden bg-zinc-100"><img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=700&q=80" alt="" class="w-full h-48 object-cover brightness-95 group-hover:scale-105 transition-transform duration-700"></div>
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="font-medium">Family</h3><p class="text-xl font-light">₹500<span class="text-xs text-zinc-400">/yr</span></p>
+          <p class="mt-3 text-xs text-zinc-400">15 books · All benefits · Priority events</p>
+          <a href="#" class="mt-auto pt-6"><span class="block text-center text-sm py-2.5 rounded-full bg-zinc-900 text-white hover:bg-zinc-700 transition-colors">Join Now</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <section class="reveal pb-24 max-w-3xl mx-auto flex flex-col sm:flex-row items-center gap-6">
+    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" alt="Meera Desai" class="w-20 h-20 rounded-full object-cover bg-zinc-200 grayscale hover:grayscale-0 transition-all duration-500 shrink-0">
+    <div>
+      <p class="text-xl font-light text-zinc-700">“Greenwood has been my second home for fifteen years — it’s where I learned to love reading.”</p>
+      <p class="mt-3 text-xs text-zinc-400">— Meera Desai, volunteer at the children’s section</p>
+    </div>
+  </section>
+
+
+
+
+  <section id="contact" class="reveal pb-24 scroll-mt-16">
+    <div class="rounded-3xl bg-emerald-50 p-8 md:p-16">
+      <p class="text-xs tracking-widest text-zinc-400 uppercase">Contact</p>
+      <h2 class="mt-6 text-3xl md:text-5xl font-light tracking-tight">Visit us at 42 Elm Street, Greenwood.</h2>
+      <p class="mt-4 text-sm text-zinc-500 flex flex-wrap gap-x-8 gap-y-1"><span>Mon–Fri: 8am–7pm</span><span>Sat: 9am–5pm</span><span>Sun: Closed</span></p>
+      <div class="mt-8 flex flex-wrap items-center gap-4">
+        <a href="https://maps.google.com/?q=42+Elm+Street+Greenwood" target="_blank" rel="noopener" class="text-sm px-6 py-3 rounded-full bg-zinc-900 text-white hover:bg-zinc-700 transition-colors">Get Directions</a>
+        <a href="mailto:hello@greenwoodlibrary.org" class="text-sm text-zinc-500 hover:text-zinc-900 transition-colors">(555) 012-3456 · hello@greenwoodlibrary.org</a>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <section id="events" class="reveal pb-24 scroll-mt-16">
+    <div class="flex items-center justify-between mb-10">
+      <h2 class="text-3xl md:text-4xl font-light">What's Coming Up</h2>
+      <a href="#" class="text-sm px-5 py-2 rounded-full bg-zinc-900 text-white hover:bg-zinc-700 transition-colors">All Events</a>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <a href="#" class="group block">
+        <div class="overflow-hidden rounded-lg bg-zinc-100"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=700&q=80" alt="" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700"></div>
+        <h3 class="mt-4 text-sm text-zinc-700">Summer Reading Challenge — open to children aged 6–14</h3>
+        <p class="mt-1 text-xs text-zinc-400">5 Aug 2026</p>
+      </a>
+      <a href="#" class="group block">
+        <div class="overflow-hidden rounded-lg bg-zinc-100"><img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=700&q=80" alt="" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700"></div>
+        <h3 class="mt-4 text-sm text-zinc-700">Book Club: Discussing <em>The God of Small Things</em></h3>
+        <p class="mt-1 text-xs text-zinc-400">10 Aug 2026</p>
+      </a>
+      <a href="#" class="group block">
+        <div class="overflow-hidden rounded-lg bg-zinc-100"><img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=700&q=80" alt="" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700"></div>
+        <h3 class="mt-4 text-sm text-zinc-700">Digital Literacy Workshop — free, no registration needed</h3>
+        <p class="mt-1 text-xs text-zinc-400">18 Aug 2026</p>
+      </a>
+      <a href="#" class="group block">
+        <div class="overflow-hidden rounded-lg bg-zinc-100"><img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=700&q=80" alt="" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700"></div>
+        <h3 class="mt-4 text-sm text-zinc-700">Author Meet: Priya Sharma — Q&amp;A and book signing</h3>
+        <p class="mt-1 text-xs text-zinc-400">25 Aug 2026</p>
+      </a>
+    </div>
+  </section>
+</main>
+
+
+
+
+
+
+<footer class="max-w-7xl mx-auto px-5 mt-16 pb-10">
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-10 pb-12">
+    <div class="col-span-2 md:col-span-1">
+      <p class="font-semibold">Greenwood</p>
+      <div class="mt-4 flex gap-2">
+        <a href="#" class="w-8 h-8 rounded-full bg-zinc-100 text-[10px] text-zinc-500 flex items-center justify-center hover:bg-zinc-900 hover:text-white transition-colors">Fb</a>
+        <a href="#" class="w-8 h-8 rounded-full bg-zinc-100 text-[10px] text-zinc-500 flex items-center justify-center hover:bg-zinc-900 hover:text-white transition-colors">Ig</a>
+        <a href="#" class="w-8 h-8 rounded-full bg-zinc-100 text-[10px] text-zinc-500 flex items-center justify-center hover:bg-zinc-900 hover:text-white transition-colors">Tw</a>
+      </div>
+    </div>
+    <div>
+      <p class="font-medium border-b border-zinc-100 pb-2 mb-4">Pages</p>
+      <ul class="space-y-2 text-sm text-zinc-400">
+        <li><a href="#top" class="hover:text-zinc-900 transition-colors">Home</a></li>
+        <li><a href="#sections" class="hover:text-zinc-900 transition-colors">Sections</a></li>
+        <li><a href="#membership" class="hover:text-zinc-900 transition-colors">Membership</a></li>
+        <li><a href="#events" class="hover:text-zinc-900 transition-colors">Events</a></li>
+        <li><a href="#contact" class="hover:text-zinc-900 transition-colors">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-medium border-b border-zinc-100 pb-2 mb-4">Sections</p>
+      <ul class="space-y-2 text-sm text-zinc-400">
+        <li><a href="#" class="hover:text-zinc-900 transition-colors">Fiction</a></li>
+        <li><a href="#" class="hover:text-zinc-900 transition-colors">Children's</a></li>
+        <li><a href="#" class="hover:text-zinc-900 transition-colors">Science</a></li>
+        <li><a href="#" class="hover:text-zinc-900 transition-colors">History</a></li>
+        <li><a href="#" class="hover:text-zinc-900 transition-colors">Periodicals</a></li>
+        <li><a href="#" class="hover:text-zinc-900 transition-colors">Digital Lab</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-medium border-b border-zinc-100 pb-2 mb-4">Details</p>
+      <ul class="space-y-2 text-sm text-zinc-400">
+        <li>42 Elm Street</li><li>(555) 012-3456</li>
+        <li><a href="mailto:hello@greenwoodlibrary.org" class="hover:text-zinc-900 transition-colors">hello@greenwoodlibrary.org</a></li>
+        <li>Mon–Fri 8am–7pm</li><li>Sat 9am–5pm</li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-zinc-100 pt-6 flex flex-col sm:flex-row justify-between gap-2 text-xs text-zinc-400">
+    <p>© 2026 Greenwood Public Library</p>
+    <div class="flex gap-6"><a href="#" class="hover:text-zinc-900 transition-colors">Privacy</a><a href="#" class="hover:text-zinc-900 transition-colors">Terms</a></div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+</script>
+</body>
+</html>
