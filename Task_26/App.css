@@ -1,0 +1,85 @@
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+body {
+  margin: 0;
+  background: #000;
+}
+
+.app {
+  min-height: 100vh;
+  background: #000;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.card-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px 40px;
+  justify-items: center;
+}
+
+.card {
+  width: 270px;
+  height: 270px;
+  box-sizing: border-box;
+  padding: 36px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #8b7cf6;
+
+  border: 3px solid transparent;
+  background:
+    linear-gradient(#000, #000) padding-box,
+    linear-gradient(var(--angle), #ff1f4b, #5b2bd9, #ff6a00) border-box;
+  animation: spin 6s linear infinite;
+}
+
+.card-image {
+  width: 112px;
+  height: 112px;
+  object-fit: cover;
+}
+
+.card-title {
+  margin: 18px 0 8px;
+  font-size: 1.2rem;
+}
+
+.card-description {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+@keyframes spin {
+  to {
+    --angle: 360deg;
+  }
+}
+
+/* Responsive grid */
+@media (max-width: 900px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    animation: none;
+  }
+}
