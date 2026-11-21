@@ -1,0 +1,78 @@
+:root {
+  --green: #6ab165;
+  --green-dark: #559a50;
+  --ink: #111;
+  --muted: #777;
+  --bg: #f1f1f1;
+  --card: #fff;
+  --shadow: 0 2px 6px rgba(0,0,0,.12), 0 2px 8px rgba(0,0,0,.08);
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 15px; color: var(--ink); background: #fff; line-height: 1.5; }
+a { color: inherit; text-decoration: none; }
+
+/* Header */
+.header { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 14px 72px; background: #fff; position: sticky; top: 0; z-index: 10; }
+.logo { display: inline-flex; align-items: center; gap: 8px; }
+.logo-mark { width: 28px; height: 28px; border-radius: 6px; background: var(--green); color: #fff; font-weight: 700; display: grid; place-items: center; }
+.logo-text { font-size: 12px; font-weight: 700; letter-spacing: .5px; }
+.nav { display: flex; align-items: baseline; gap: 24px; }
+.nav-title { font-size: 22px; }
+.nav-link { font-size: 14px; color: var(--muted); }
+.nav a.active { font-weight: 700; color: var(--ink); }
+.auth-buttons { justify-self: end; display: flex; gap: 10px; }
+
+/* Buttons */
+.btn { display: inline-block; border: 0; border-radius: 4px; background: var(--green); color: #fff; cursor: pointer; font-weight: 700; font-size: 12px; padding: 10px 16px; transition: background .15s; }
+.btn:hover { background: var(--green-dark); }
+.btn:focus-visible, input:focus-visible, a:focus-visible { outline: 2px solid #2d6cdf; outline-offset: 2px; }
+.btn-small { font-weight: 400; font-size: 13px; padding: 6px 18px; }
+.btn-block { width: 100%; padding: 12px; margin-top: 8px; border: 1px solid #3d7a39; }
+.btn-outline { background: #fff; color: var(--ink); border: 1px solid #ddd; text-transform: uppercase; font-size: 11px; }
+.btn-outline:hover { background: #f5f5f5; }
+
+/* Layout */
+.page { min-height: calc(100vh - 62px); }
+.layout { display: grid; gap: 16px; padding: 16px 16px 40px; max-width: 1400px; margin: 0 auto; align-items: start; }
+.layout-home { grid-template-columns: 2fr 1fr; }
+.layout-dashboard { grid-template-columns: 1fr 2fr; }
+.col-main, .col-side { display: flex; flex-direction: column; gap: 16px; }
+.layout-home .col-side { order: 2; }
+
+/* Cards */
+.card { background: var(--card); box-shadow: var(--shadow); border-radius: 2px; overflow: hidden; }
+.card-body { padding: 16px; }
+.card h2 { margin: 4px 0 12px; font-size: 20px; }
+.card h3 { margin: 0 0 10px; font-size: 17px; }
+.card p { margin: 0 0 14px; font-size: 13px; }
+.meta span { color: var(--muted); }
+.meta { font-size: 14px !important; }
+.profile-img { height: 300px; background: linear-gradient(160deg, #d9d9d9, #c4c4c4); position: relative; background-image: url("public/images/pexels-fatima-ben-2164793783-40570602.jpg");}
+.post-img { height: 460px; background: linear-gradient(135deg, #3b3a26, #6e6a4d 45%, #2f3d29); background-image: url("public/images/pexels-desert-morocco-adventure-tours-2165350666-40676390.jpg") ; }
+.post-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 18px; }
+.comments { font-size: 13px; font-weight: 700; }
+.comments b { background: #000; color: #fff; padding: 2px 7px; margin-left: 6px; }
+.popular { padding: 0; }
+.popular h4 { margin: 0; padding: 16px; font-size: 17px; font-weight: 400; }
+.popular ul { list-style: none; margin: 0; padding: 0; }
+.popular li { display: flex; gap: 12px; align-items: center; padding: 10px 16px; border-top: 1px solid #e5e5e5; }
+.popular small { display: block; font-size: 12px; }
+.thumb { width: 38px; height: 28px; background: #cfd6cf; flex: none; }
+
+/* Auth */
+.auth-wrap { background: var(--bg); min-height: calc(100vh - 62px); display: grid; place-items: center; padding: 24px; }
+.auth-card { width: 300px; background: #fff; border-radius: 8px; padding: 24px 28px 28px; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+.auth-card h1 { text-align: center; font-size: 26px; margin: 8px 0 24px; color: #333; }
+.auth-card label { display: block; font-size: 12px; margin: 14px 0 4px; }
+.auth-card input { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; background: #eef1fd; font-size: 14px; }
+.auth-alt { font-size: 12px; text-align: center; margin: 16px 0 0; color: var(--muted); }
+.auth-alt a { color: var(--green-dark); font-weight: 700; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .header { grid-template-columns: 1fr auto; padding: 10px 16px; row-gap: 6px; }
+  .nav { grid-column: 1 / -1; grid-row: 2; justify-content: center; }
+  .layout-home, .layout-dashboard { grid-template-columns: 1fr; }
+  .layout-home .col-side { order: 0; }
+  .post-img { height: 260px; }
+}
